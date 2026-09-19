@@ -3,42 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Landing Page Responsiva</title>
+    <title>TechStore - Venta y Servicio Técnico</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Encabezado y Navegación -->
     <header class="header">
         <nav class="nav">
-            <a href="#" class="logo">MiMarca</a>
+            <a href="#" class="logo">TechStore</a>
             <ul class="nav-links">
-                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#servicios">Servicio Técnico</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
         <div class="hero">
-            <h1>Soluciones Digitales a tu Medida</h1>
-            <p>Diseñamos y desarrollamos sitios web adaptables y funcionales.</p>
-            <a href="#contacto" class="btn">Empezar Ahora</a>
+            <h1>Tu Tienda de Tecnología de Confianza</h1>
+            <p>Venta de equipos de cómputo, laptops, periféricos y servicio de reparación profesional.</p>
+            <a href="#catalogo" class="btn">Explorar Catálogo</a>
         </div>
     </header>
 
     <main>
-        <!-- Sección de Servicios -->
+        <!-- SECCIÓN DE CATÁLOGO UNIFICADO EN UN SOLO CARD -->
+        <section id="catalogo" class="catalog-section">
+            <h2>Nuestro Catálogo de Productos</h2>
+
+            <!-- Contenedor Card Principal -->
+            <div class="catalog-card">
+                <!-- Pestañas Verticals en el Lado Izquierdo -->
+                <div class="tabs-sidebar">
+                    <button class="tab-btn active" onclick="openCategory(event, 'pcs')">Computadoras</button>
+                    <button class="tab-btn" onclick="openCategory(event, 'laptops')">Laptops</button>
+                    <button class="tab-btn" onclick="openCategory(event, 'accesorios')">Accesorios</button>
+                </div>
+
+                <!-- Área de Contenido Principal a la Derecha -->
+                <div class="tab-content-container">
+                    <!-- Categoría 1: Computadoras -->
+                    <div id="pcs" class="tab-content active">
+                        <h3>Computadoras de Escritorio</h3>
+                        <div class="product-grid">
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=PC+Office+i3" alt="PC Office i3">
+                                <h4>PC Office Intel Core i3</h4>
+                                <p class="specs">8GB RAM | 256GB SSD | Gráficos Integrados</p>
+                                <p class="price">$350.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=PC+Work+i5" alt="PC Work i5">
+                                <h4>PC Pro Intel Core i5</h4>
+                                <p class="specs">16GB RAM | 512GB SSD | Chasis Torre</p>
+                                <p class="price">$520.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=PC+Gamer+Entry" alt="PC Gamer Entry">
+                                <h4>PC Gamer Ryzen 5</h4>
+                                <p class="specs">16GB RAM | 512GB SSD | GTX 1650 4GB</p>
+                                <p class="price">$680.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=PC+Gamer+Pro" alt="PC Gamer Pro">
+                                <h4>PC Gamer Intel Core i7</h4>
+                                <p class="specs">32GB RAM | 1TB SSD | RTX 3060 12GB</p>
+                                <p class="price">$1,100.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=PC+Extreme" alt="PC Extreme">
+                                <h4>PC Workstation Ryzen 9</h4>
+                                <p class="specs">64GB RAM | 2TB SSD | RTX 4070 12GB</p>
+                                <p class="price">$1,850.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=All+In+One" alt="All In One">
+                                <h4>All-in-One HP 24"</h4>
+                                <p class="specs">Intel Core i5 | 16GB RAM | 512GB SSD</p>
+                                <p class="price">$740.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 2: Laptops -->
+                    <div id="laptops" class="tab-content">
+                        <h3>Laptops</h3>
+                        <div class="product-grid">
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=Laptop+Basic" alt="Laptop Básica">
+                                <h4>Laptop Lenovo 15.6"</h4>
+                                <p class="specs">Intel Celeron | 8GB RAM | 256GB SSD</p>
+                                <p class="price">$290.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=Laptop+HP" alt="Laptop HP">
+                                <h4>Laptop HP Pavilion 14"</h4>
+                                <p class="specs">Core i5 | 8GB RAM | 512GB SSD</p>
+                                <p class="price">$580.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=Laptop+Asus" alt="Laptop Asus">
+                                <h4>Laptop ASUS Vivobook</h4>
+                                <p class="specs">Ryzen 7 | 16GB RAM | 512GB SSD</p>
+                                <p class="price">$690.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=Laptop+Gamer" alt="Laptop Gamer">
+                                <h4>Laptop Lenovo Legion 5</h4>
+                                <p class="specs">Core i7 | 16GB RAM | RTX 4050</p>
+                                <p class="price">$1,050.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=MacBook+Air" alt="MacBook Air">
+                                <h4>MacBook Air M2 13"</h4>
+                                <p class="specs">Chip M2 | 8GB RAM | 256GB SSD</p>
+                                <p class="price">$1,150.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=Laptop+Dell" alt="Laptop Dell">
+                                <h4>Laptop Dell Latitude</h4>
+                                <p class="specs">Core i5 | 16GB RAM | 512GB SSD Pro</p>
+                                <p class="price">$720.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Categoría 3: Accesorios -->
+                    <div id="accesorios" class="tab-content">
+                        <h3>Accesorios y Periféricos</h3>
+                        <div class="product-grid">
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=Teclado+Mecanico" alt="Teclado Mecánico">
+                                <h4>Teclado Mecánico RGB</h4>
+                                <p class="specs">Switch Blue | Anti-ghosting | USB</p>
+                                <p class="price">$45.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=Mouse+Gamer" alt="Mouse Gamer">
+                                <h4>Mouse Gamer 12000 DPI</h4>
+                                <p class="specs">Sensor Óptico | 6 Botones Programables</p>
+                                <p class="price">$25.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=Audifonos" alt="Audífonos Gamer">
+                                <h4>Audífonos Surround 7.1</h4>
+                                <p class="specs">Micrófono Cancelación Ruido | RGB</p>
+                                <p class="price">$55.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=Monitor+24" alt="Monitor 24 IPS">
+                                <h4>Monitor Gamer 24" 165Hz</h4>
+                                <p class="specs">Panel IPS | 1ms | Full HD HDMI/DP</p>
+                                <p class="price">$170.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=Disco+SSD" alt="SSD 1TB">
+                                <h4>Disco SSD NVMe M.2 1TB</h4>
+                                <p class="specs">Lectura hasta 3500 MB/s High Speed</p>
+                                <p class="price">$85.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                            <article class="product-card">
+                                <img src="https://via.placeholder.com/250x180/1F2833/66FCF1?text=Webcam+HD" alt="Webcam Full HD">
+                                <h4>Webcam Full HD 1080p</h4>
+                                <p class="specs">Micrófono Integrado | USB Plug & Play</p>
+                                <p class="price">$35.00</p>
+                                <button class="btn-buy">Comprar</button>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE SERVICIO TÉCNICO -->
         <section id="servicios" class="services">
-            <h2>Nuestros Servicios</h2>
+            <h2>Servicios de Reparación y Mantenimiento</h2>
             <div class="services-grid">
                 <article class="card">
-                    <h3>Diseño UI/UX</h3>
-                    <p>Interfaces atractivas, intuitivas y centradas en la experiencia del usuario.</p>
+                    <h3>Mantenimiento Preventivo</h3>
+                    <p>Limpieza profunda de componentes, cambio de pasta térmica y optimización del flujo de aire.</p>
                 </article>
                 <article class="card">
-                    <h3>Desarrollo Web</h3>
-                    <p>Construcción de código limpio con HTML5 y CSS3 siguiendo estándares web.</p>
+                    <h3>Reparación de Hardware</h3>
+                    <p>Diagnóstico de fallas, cambio de pantallas, teclados, baterías y reparación de placas madre.</p>
                 </article>
                 <article class="card">
-                    <h3>Diseño Responsivo</h3>
-                    <p>Adaptación perfecta a cualquier pantalla: móviles, tablets y escritorios.</p>
+                    <h3>Soporte de Software y Formateo</h3>
+                    <p>Instalación de Sistemas Operativos, antivirus, eliminación de malware y recuperación de datos.</p>
                 </article>
             </div>
         </section>
@@ -56,17 +222,34 @@
                     <input type="email" id="email" name="email" placeholder="tu@email.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+                    <label for="mensaje">Consulta o Cotización</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿Qué producto o servicio necesitas?" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-submit">Enviar Mensaje</button>
             </form>
         </section>
     </main>
 
-    <!-- Pie de Página -->
     <footer class="footer">
-        <p>&copy; 2026 MiMarca. Proyecto colaborativo de desarrollo web.</p>
+        <p>&copy; 2026 TechStore. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Lógica JavaScript para la Alternancia de Pestañas -->
+    <script>
+        function openCategory(evt, categoryName) {
+            let contents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove("active");
+            }
+
+            let tabButtons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            document.getElementById(categoryName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 </body>
 </html>
